@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 from typing import List, Dict
 
 # ---------- args ----------
-manifest_path = sys.argv[1] if len(sys.argv) > 1 else "out_stage1/manifest.json"
+manifest_path = sys.argv[1] if len(sys.argv) > 1 else "out_stage1_sub1/manifest.json"
 out_npz = sys.argv[2] if len(sys.argv) > 2 else "out_stage2/group_stacked_data.npz"
 OUT_DIR = os.path.dirname(out_npz) or "."
 os.makedirs(OUT_DIR, exist_ok=True)
