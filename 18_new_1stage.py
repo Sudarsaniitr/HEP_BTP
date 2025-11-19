@@ -52,7 +52,7 @@ TMIN, TMAX = -0.200, 0.600
 BASELINE = (TMIN, 0.0)
 HP, LP = 0.1, 30.0                 # bandpass for epochs
 NOTCH = None
-REJECT = dict(eeg=150)         # rejection threshold (can relax in fallback)
+REJECT = dict(eeg=150e-6)         # rejection threshold (can relax in fallback)
 MAX_EPOCHS_PER_SUBJECT = 1e9     # to bound memory/time (subsamples R-peaks)
 DROP_CHANNEL_THRESHOLD = 0.40     # drop channels if >40% epochs rejected due to them
 VERBOSE = True
