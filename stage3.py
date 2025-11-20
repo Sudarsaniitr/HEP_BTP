@@ -1,12 +1,11 @@
-#!/usr/bin/env python3
+
 """
-endgame_stage3_fixed.py
+Stage-3:
+cluster permutation test for stacked HEP data.
 
-Improved Stage-3 cluster permutation test for stacked HEP data.
+Command to run this code : 
 
-Usage:
-    python endgame_stage3_fixed.py out_stage2_final/group_stacked_data.npz \
-        --groupA good --groupB bad --n_permutations 2000 --n_jobs 4 --outdir out_stage3_final
+    python stage3.py out_stage2_final/group_stacked_data.npz  --groupA good --groupB bad --n_permutations 3500 --n_jobs 4 --outdir out_stage3_final
 """
 import os
 import argparse
@@ -183,12 +182,11 @@ def main():
     p.add_argument("--temporal_connectivity", type=int, default=1)
     p.add_argument("--verbose", type=int, default=1)
     args = p.parse_args()
-
+#   Given in the terminal, refer to the top of the file for command to run this code
     os.makedirs(args.outdir, exist_ok=True)
     if args.verbose: print("Loading stacked data from", args.npz)
     npz = np.load(args.npz, allow_pickle=True)
 
-    # robust channel name unpack
     if "ch_names" in npz:
         ch_names = _unpack_array_like(npz["ch_names"])
     elif "channels" in npz:
@@ -196,7 +194,7 @@ def main():
     else:
         raise RuntimeError("NPZ lacks 'ch_names' or 'channels'.")
 
-    # dedupe preserve order
+ 
     seen=set(); cn=[]
     for c in ch_names:
         if c not in seen:
@@ -442,12 +440,14 @@ def main():
         ch_names = ch_names, times = times
     )
 
+    # Results are being saved here
+
     out_file = os.path.join(args.outdir, "results.pkl")
     with open(out_file, "wb") as f:
         pickle.dump(out, f)
     print("Saved:", out_file)
 
-    # optional plotting of t-map and clusters (best-effort)
+    #  plotting of t-map and clusters
     try:
         if plt is not None and mne is not None:
             fig, ax = plt.subplots(1,1, figsize=(10,4))

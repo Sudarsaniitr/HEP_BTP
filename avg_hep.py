@@ -1,8 +1,8 @@
 """
 Per-channel HEP plots: one PNG per channel showing mean ± SEM for two groups.
 
-Usage:
-    python plot_per_channel.py --npz /mnt/data/group_stacked_data.npz --groupA good --groupB bad --outdir out_plots_per_channel
+Coommand to run this code:
+    avg_hep.py --npz /mnt/data/group_stacked_data.npz --groupA good --groupB bad --outdir out_plots_per_channel
 """
 import os
 import argparse

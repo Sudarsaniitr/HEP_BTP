@@ -1,6 +1,6 @@
 
 """
-stage2_stack_hep.py
+Stage-2: Group-level HEP data stacking and channel position mapping
 
 Load per-subject HEP NPZ outputs (manifest_hep.json), harmonize channels/times,
 attempt to map channels to standard montages for ch_pos, and save stacked arrays:
@@ -13,7 +13,7 @@ Outputs saved keys:
  - times: (n_times,) template times vector
  - subjects: (n_subjects,) subject names
  - groups: (n_subjects,) group labels
- - ch_pos: saved dict mapping ch_name -> (x,y,z) when available (should be filled)
+ - ch_pos: saved dict mapping ch_name -> (x,y,z) when available 
 """
 import os
 import json
@@ -21,7 +21,7 @@ import numpy as np
 import mne
 
 # --------- CONFIG ----------
-MANIFEST_STAGE1 = "out_stage1_hep_opt/manifest_hep_opt.json"   # produced by your Stage-1 code
+MANIFEST_STAGE1 = "out_stage1_hep_opt/manifest_hep_opt.json"   # produced by your Stage-1 code (includes paths and grouup information)
 OUT_DIR = "out_stage2_final"
 OUT_PATH = os.path.join(OUT_DIR, "group_stacked_data.npz")
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -29,7 +29,7 @@ os.makedirs(OUT_DIR, exist_ok=True)
 # Montages to try (order matters: first try standard_1020 then fallback)
 MONTAGES_TO_TRY = ("standard_1020", "standard_1005")
 
-# Normalization function (reuse same logic you used earlier)
+# Normalization function 
 def normalize_channel_name(name: str) -> str:
     if name is None:
         return ""

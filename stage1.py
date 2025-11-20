@@ -1,10 +1,10 @@
 """
-stage1_hep_optimized.py
 
 Optimized Stage-1 HEP extraction (single-subject .npz outputs).
 - Batch reads merged blocks (one read per merged interval).
 - Vectorized epoch extraction for all channels from each block.
-- Running-sum aggregator (no storing of all epochs).
+- Taking average of epochs as it reads them (no full storage of all epochs).
+- MAD-based artifact rejection per-channel.
 - Optional downsampling (decimation) per-block to reduce time/memory.
 - Progress bars via tqdm.
 - Saves per-subject `{name}_HEP.npz` containing:
@@ -13,7 +13,7 @@ Optimized Stage-1 HEP extraction (single-subject .npz outputs).
     times: time vector (n_times,)
     subject, group
 
-Configurable vars near top.
+Modular code, with parameters easy to adjust at the top.
 """
 
 import os
@@ -26,15 +26,14 @@ from tqdm import tqdm
 
 # -------------------- USER CONFIG --------------------
 SUBJECTS = [
-    # fill in your subjects here. Example:
-    # {"name":"EPCTL01","edf_path":r"EPCTL01\EPCTL01.edf","group":"good"},
+#   Fill the subjects you want to process at once
     {"name":"EPCTL26","edf_path":r"EPCTL26\EPCTL26\EPCTL26.edf","group":"bad"},
     {"name":"EPCTL28","edf_path":r"EPCTL28\EPCTL28\EPCTL28.edf","group":"good"},
     {"name":"EPCTL10","edf_path":r"EPCTL10\EPCTL10\EPCTL10.edf","group":"bad"}
     # {"name":"EPCTL01","edf_path":r"EPCTL01-2025\EPCTL01\EPCTL01 - fixed.edf","group":"good"},
 ]
 
-OUT_DIR = "out_stage1_hep_opt"
+OUT_DIR = "out_stage1_hep_opt" # output directory
 os.makedirs(OUT_DIR, exist_ok=True)
 
 HP = 0.1            # highpass (Hz)
@@ -43,22 +42,23 @@ TMIN = -0.2         # epoch start (s) -200 ms
 TMAX = 0.6          # epoch end (s) +600 ms
 BASELINE = (TMIN, 0.0)
 
-# Downsample target (set to None to ktaskeep native sfreq). Reasonable choices: 250, 200, 300
+# Downsample target 
 TARGET_SFREQ = 250.0
 
 # Maximum RAM (GB) allowed for a single read-block. We'll avoid reading blocks larger than this.
-# Set to your machine RAM minus OS/buffer. You told me you have 16 GB; keep safe margin -> use 8 GB default.
+
 MAX_RAM_GB = 16.0
 
 # Merge nearby epoch windows if they are within this many milliseconds (to reduce number of reads).
 MERGE_MARGIN_MS = 5.0
 
-# Excluded channels and normalization (you provided these)
+# Excluded channels and normalization 
 excluded_channels = [
     "ECG1","ECG2","leg","RLEG-","RLEG+","LLEG-","LLEG+",
     "EOG1","EOG2","ChEMG1","ChEMG2","SO1","SO2",
     "ZY1","ZY2","F11","F12","FT11","FT12","TP11","TP12","P11","P12"
 ]
+# Normalize channel name for matching
 def normalize_channel_name(name: str) -> str:
     if name is None:
         return ""
@@ -121,7 +121,7 @@ def process_subject_opt(subj):
     for ch in raw.ch_names:
         new = ch  # keep original casing for saved names, but we will use normalized keys for matching montage/exclusion
         rename_map[ch] = new
-    # (we won't rename to uppercase globally to avoid changing users' expectations)
+  
 
     # find ECG channel and EEG channels to keep
     eeg_chs = []
@@ -367,7 +367,7 @@ def main():
             manifest["subjects"].append(res)
     with open(os.path.join(OUT_DIR, "manifest_hep_opt.json"), "w") as f:
         json.dump(manifest, f, indent=2)
-    print("DONE. Manifest saved to", os.path.join(OUT_DIR, "manifest_hep_opt.json"))
+    print("DONE. Manifest saved to", os.path.join(OUT_DIR, "manifest_hep_opt.json")) #stores the basic information of all the processed results which will be used in the second stage"
 
 if __name__ == "__main__":
     main()
