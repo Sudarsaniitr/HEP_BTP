@@ -28,10 +28,10 @@ from tqdm import tqdm
 SUBJECTS = [
     # fill in your subjects here. Example:
     # {"name":"EPCTL01","edf_path":r"EPCTL01\EPCTL01.edf","group":"good"},
-    {"name":"EPCTL16","edf_path":r"EPCTL16\EPCTL16\EPCTL16.edf","group":"good"},
-    {"name":"EPCTL25","edf_path":r"EPCTL25\EPCTL25\EPCTL25.edf","group":"bad"},
-    {"name":"EPCTL18","edf_path":r"EPCTL18\EPCTL18\EPCTL18.edf","group":"bad"},
-    {"name":"EPCTL01","edf_path":r"EPCTL01-2025\EPCTL01\EPCTL01 - fixed.edf","group":"good"},
+    {"name":"EPCTL26","edf_path":r"EPCTL26\EPCTL26\EPCTL26.edf","group":"bad"},
+    {"name":"EPCTL28","edf_path":r"EPCTL28\EPCTL28\EPCTL28.edf","group":"good"},
+    {"name":"EPCTL10","edf_path":r"EPCTL10\EPCTL10\EPCTL10.edf","group":"bad"}
+    # {"name":"EPCTL01","edf_path":r"EPCTL01-2025\EPCTL01\EPCTL01 - fixed.edf","group":"good"},
 ]
 
 OUT_DIR = "out_stage1_hep_opt"

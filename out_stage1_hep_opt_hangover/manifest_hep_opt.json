@@ -1,0 +1,10 @@
+{
+  "subjects": [
+    {
+      "name": "EPCTL23",
+      "group": "bad",
+      "file": "out_stage1_hep_opt/EPCTL23_HEP.npz",
+      "n_channels": 71
+    }
+  ]
+}

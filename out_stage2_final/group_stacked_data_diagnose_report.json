@@ -1,0 +1,41 @@
+{
+  "ch_names_len": 71,
+  "all_data_shape": [
+    13,
+    71,
+    200
+  ],
+  "nan_count": 0,
+  "n_times": 200,
+  "n_subjects": 13,
+  "groups": {
+    "bad": 6,
+    "good": 7
+  },
+  "montage_matches": {
+    "standard_1020": [
+      71,
+      71
+    ],
+    "standard_1005": [
+      71,
+      71
+    ]
+  },
+  "ch_pos_count": 0,
+  "adj_deg_min": 4,
+  "adj_deg_mean": 4.338028169014085,
+  "adj_deg_max": 7,
+  "tmap_summary": {
+    "df": 11,
+    "tcrit": 2.200985160082949,
+    "suprathreshold_nodes": 105,
+    "total_nodes": 14200,
+    "shape": [
+      71,
+      200
+    ],
+    "tmap_min": -3.812923247668663,
+    "tmap_max": 3.513078109837211
+  }
+}

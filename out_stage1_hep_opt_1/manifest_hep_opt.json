@@ -1,0 +1,40 @@
+{
+  "subjects": [
+    {
+      "name": "EPCTL16",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL16_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL25",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL25_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL18",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL18_HEP.npz",
+      "n_channels": 71
+    },
+     {
+      "name": "EPCTL05",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL05_HEP.npz",
+      "n_channels": 71
+    },
+     {
+      "name": "EPCTL04",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL04_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL01",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL01_HEP.npz",
+      "n_channels": 71
+    }
+  ]
+}

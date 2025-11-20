@@ -1,9 +1,63 @@
 {
   "subjects": [
     {
+      "name": "EPCTL26",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL26_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL28",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL28_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL10",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL10_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL27",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL27_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL20",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL20_HEP.npz",
+      "n_channels": 71
+    },
+    {
       "name": "EPCTL16",
       "group": "good",
       "file": "out_stage1_hep_opt\\EPCTL16_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL01",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL01_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL05",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL05_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL03",
+      "group": "good",
+      "file": "out_stage1_hep_opt\\EPCTL03_HEP.npz",
+      "n_channels": 71
+    },
+    {
+      "name": "EPCTL04",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL04_HEP.npz",
       "n_channels": 71
     },
     {
@@ -18,22 +72,17 @@
       "file": "out_stage1_hep_opt\\EPCTL18_HEP.npz",
       "n_channels": 71
     },
-     {
-      "name": "EPCTL05",
-      "group": "good",
-      "file": "out_stage1_hep_opt/EPCTL05_HEP.npz",
-      "n_channels": 71
-    },
-     {
-      "name": "EPCTL04",
-      "group": "bad",
-      "file": "out_stage1_hep_opt/EPCTL05_HEP.npz",
-      "n_channels": 71
-    },
     {
-      "name": "EPCTL01",
+      "name": "EPCTL22",
       "group": "good",
-      "file": "out_stage1_hep_opt\\EPCTL01_HEP.npz",
+      "file": "out_stage1_hep_opt\\EPCTL22_HEP.npz",
+      "n_channels": 71
+    }
+    ,
+    {
+      "name": "EPCTL23",
+      "group": "bad",
+      "file": "out_stage1_hep_opt\\EPCTL23_HEP.npz",
       "n_channels": 71
     }
   ]
