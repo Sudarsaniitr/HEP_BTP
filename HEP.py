@@ -7,13 +7,13 @@ import mne
 # -----------------------------
 # Parameters
 # -----------------------------
-edf_path = r"EPCTL25\EPCTL25\EPCTL25.edf"
+edf_path = r"EPCTL18\EPCTL18\EPCTL18.edf"
 ecg_ch = "ECG1"
-eeg_ch = "F2-Ref"
+eeg_ch = "Fp2"
 
 # Define analysis window (in seconds)
-start_sec = 40        # start time
-end_sec = 216       # end time
+start_sec = 4        # start time
+end_sec = 21       # end time
 duration_sec = end_sec - start_sec
 
 # Band-pass filter range
