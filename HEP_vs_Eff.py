@@ -86,7 +86,7 @@ def read_subject_hep(npz_path):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--manifest", default="out_stage1_hep_opt/manifest_hep_opt.json", help="Stage1 manifest JSON (with per-subject 'file' and 'sleep_eff')")
-    p.add_argument("--channel", default="FP2", help="channel to use (case-insensitive, tolerant)")
+    p.add_argument("--channel", default="FT10", help="channel to use (case-insensitive, tolerant)")
     p.add_argument("--tmin", type=float, default=0.20, help="window start (s)")
     p.add_argument("--tmax", type=float, default=0.50, help="window end (s)")
     p.add_argument("--out", default="hep_peak_vs_sleep_FP2.png", help="output plot file")

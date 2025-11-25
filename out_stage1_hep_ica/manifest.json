@@ -1,0 +1,16 @@
+{
+  "subjects": [
+    {
+      "name": "EPCTL16",
+      "file": "out_stage1_hep_ica\\EPCTL16_HEP.npz",
+      "group": "",
+      "n_epochs": 3,
+      "removed_ica": [
+        151,
+        152,
+        153,
+        154
+      ]
+    }
+  ]
+}

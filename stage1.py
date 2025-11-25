@@ -28,24 +28,24 @@ from tqdm import tqdm
 SUBJECTS = [
 #   Fill the subjects you want to process at once
     {"name":"EPCTL16","edf_path":r"EPCTL16\EPCTL16\EPCTL16.edf","group":"good"},
-    {"name":"EPCTL01","edf_path":r"EPCTL01-2025\EPCTL01\EPCTL01 - fixed.edf","group":"good"},
-    {"name":"EPCTL05","edf_path":r"EPCTL05\EPCTL05\EPCTL05.edf","group":"good"},
-    {"name":"EPCTL03","edf_path":r"EPCTL03\EPCTL03\EPCTL03.edf","group":"good"},
-    {"name":"EPCTL20","edf_path":r"EPCTL20\EPCTL20\EPCTL20.edf","group":"good"},
-    {"name":"EPCTL28","edf_path":r"EPCTL28\EPCTL28\EPCTL28.edf","group":"good"},
-    {"name":"EPCTL22","edf_path":r"EPCTL22\EPCTL22\EPCTL22.edf","group":"good"},
+    # {"name":"EPCTL01","edf_path":r"EPCTL01-2025\EPCTL01\EPCTL01 - fixed.edf","group":"good"},
+    # {"name":"EPCTL05","edf_path":r"EPCTL05\EPCTL05\EPCTL05.edf","group":"good"},
+    # {"name":"EPCTL03","edf_path":r"EPCTL03\EPCTL03\EPCTL03.edf","group":"good"},
+    # {"name":"EPCTL20","edf_path":r"EPCTL20\EPCTL20\EPCTL20.edf","group":"good"},
+    # {"name":"EPCTL28","edf_path":r"EPCTL28\EPCTL28\EPCTL28.edf","group":"good"},
+    # {"name":"EPCTL22","edf_path":r"EPCTL22\EPCTL22\EPCTL22.edf","group":"good"},
 
 
-    {"name":"EPCTL23","edf_path":r"EPCTL23\EPCTL23\EPCTL23.edf","group":"bad"},
-    {"name":"EPCTL10","edf_path":r"EPCTL10\EPCTL10\EPCTL10.edf","group":"bad"},
-    {"name":"EPCTL26","edf_path":r"EPCTL26\EPCTL26\EPCTL26.edf","group":"bad"},
-    {"name":"EPCTL27","edf_path":r"EPCTL27\EPCTL27\EPCTL27.edf","group":"bad"},
-    {"name":"EPCTL04","edf_path":r"EPCTL04\EPCTL04\EPCTL04.edf","group":"bad"},
-    {"name":"EPCTL25","edf_path":r"EPCTL25\EPCTL25\EPCTL25.edf","group":"bad"},
-    {"name":"EPCTL18","edf_path":r"EPCTL18\EPCTL18\EPCTL18.edf","group":"bad"}
+    # {"name":"EPCTL23","edf_path":r"EPCTL23\EPCTL23\EPCTL23.edf","group":"bad"},
+    # {"name":"EPCTL10","edf_path":r"EPCTL10\EPCTL10\EPCTL10.edf","group":"bad"},
+    # {"name":"EPCTL26","edf_path":r"EPCTL26\EPCTL26\EPCTL26.edf","group":"bad"},
+    # {"name":"EPCTL27","edf_path":r"EPCTL27\EPCTL27\EPCTL27.edf","group":"bad"},
+    # {"name":"EPCTL04","edf_path":r"EPCTL04\EPCTL04\EPCTL04.edf","group":"bad"},
+    # {"name":"EPCTL25","edf_path":r"EPCTL25\EPCTL25\EPCTL25.edf","group":"bad"},
+    # {"name":"EPCTL18","edf_path":r"EPCTL18\EPCTL18\EPCTL18.edf","group":"bad"}
 ]
 
-OUT_DIR = "out_stage1_hep_opt" # output directory
+OUT_DIR = "out_stage1_hep_opt_ica" # output directory
 os.makedirs(OUT_DIR, exist_ok=True)
 
 HP = 0.1            # highpass (Hz)
