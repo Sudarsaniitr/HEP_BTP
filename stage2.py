@@ -19,6 +19,8 @@ import os
 import json
 import numpy as np
 import mne
+import pprint
+import ppprint
 
 # --------- CONFIG ----------
 MANIFEST_STAGE1 = "out_stage1_hep_opt/manifest_hep_opt.json"   # produced by your Stage-1 code (includes paths and grouup information)
@@ -108,6 +110,7 @@ def try_get_ch_pos_from_montages(ch_names, montages_to_try=MONTAGES_TO_TRY):
             tried.append((mname, matched))
         except Exception:
             tried.append((mname, 0))
+    # pprint.pprint(ch_pos)
     return ch_pos, tried
 
 def build_ch_pos_fill(ch_names, ch_pos_partial, k_neighbors=4):
@@ -273,7 +276,7 @@ def main():
         groups=np.array(groups, dtype=object),
         ch_pos=ch_pos_filled
     )
-
+    pprint.pprint(ch_pos_filled)
     print("Saved stacked NPZ with full 3D channel positions.")
     print("Saved stacked arrays and metadata to:", OUT_PATH)
 

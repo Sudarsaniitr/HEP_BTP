@@ -1,0 +1,21 @@
+{
+  "npz_path": "out_stage2_final/group_stacked_data.npz",
+  "keys": [
+    "all_data",
+    "ch_names",
+    "channels",
+    "times",
+    "subjects",
+    "groups",
+    "ch_pos"
+  ],
+  "ch_pos_len": 71,
+  "ch_pos_source": "ch_pos",
+  "tried": [
+    [
+      "ch_pos",
+      "dict",
+      71
+    ]
+  ]
+}
