@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 npz_to_readable_chpos.py
 Robust conversion of stacked HEP NPZ -> human-readable files, with explicit
