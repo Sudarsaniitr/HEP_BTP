@@ -1,0 +1,2 @@
+channel,ch_index,peak_t,peak_time_s,peak_time_idx,meanA_at_peak,meanB_at_peak,nA,nB
+Ch0,0,6.129044583655502,0.02899999701976777,229,1.2777363167515432e-07,-6.908366856350767e-07,2,2

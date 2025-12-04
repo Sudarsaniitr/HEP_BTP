@@ -1,0 +1,123 @@
+{
+  "subjects": [
+    {
+      "name": "EPCTL05",
+      "edf_path": "EPCTL05\\EPCTL05\\EPCTL05.edf",
+      "status": "ok",
+      "group": "good",
+      "n_epochs": 6584,
+      "notes": [
+        "Annotation file: EPCTL05\\EPCTL05\\EPCTL05.txt (found, not applied)"
+      ],
+      "ecg_channel": "ECG1",
+      "sfreq": 1000.0,
+      "ecg_samples": 22673000,
+      "evoked_file": "out_stage1\\EPCTL05\\EPCTL05_evoked-ave.fif",
+      "epochs_file": "out_stage1\\EPCTL05\\EPCTL05_epochs-epo.fif"
+    },
+    {
+      "name": "EPCTL04",
+      "edf_path": "EPCTL04\\EPCTL04\\EPCTL04.edf",
+      "status": "ok",
+      "group": "bad",
+      "n_epochs": 15010,
+      "notes": [
+        "Annotation file: EPCTL04\\EPCTL04\\EPCTL04.txt (found, not applied)"
+      ],
+      "ecg_channel": "ECG1",
+      "sfreq": 1000.0,
+      "ecg_samples": 22871000,
+      "evoked_file": "out_stage1\\EPCTL04\\EPCTL04_evoked-ave.fif",
+      "epochs_file": "out_stage1\\EPCTL04\\EPCTL04_epochs-epo.fif"
+    },
+    {
+      "name": "EPCTL03",
+      "edf_path": "EPCTL03\\EPCTL03\\EPCTL03.edf",
+      "status": "ok",
+      "group": "good",
+      "n_epochs": 14564,
+      "notes": [
+        "Annotation file: EPCTL03\\EPCTL03\\EPCTL03.txt (found, not applied)"
+      ],
+      "ecg_channel": "ECG1",
+      "sfreq": 1000.0,
+      "ecg_samples": 25291000,
+      "evoked_file": "out_stage1\\EPCTL03\\EPCTL03_evoked-ave.fif",
+      "epochs_file": "out_stage1\\EPCTL03\\EPCTL03_epochs-epo.fif"
+    },
+    {
+      "name": "EPCTL01",
+      "edf_path": "EPCTL01-2025\\EPCTL01\\EPCTL01 - fixed.edf",
+      "status": "ok",
+      "group": "good",
+      "n_epochs": 1072,
+      "notes": [
+        "Annotation file: EPCTL01-2025\\EPCTL01\\test1.txt (found, not applied)",
+        "Subsampled R-peaks to: 2000"
+      ],
+      "ecg_channel": "ECG1",
+      "sfreq": 1000.0,
+      "ecg_samples": 28738000,
+      "evoked_file": "out_stage1_sub1\\EPCTL01\\EPCTL01_evoked-ave.fif",
+      "epochs_file": "out_stage1_sub1\\EPCTL01\\EPCTL01_epochs-epo.fif"
+    },
+    {
+      "name": "EPCTL18",
+      "edf_path": "EPCTL18\\EPCTL18\\EPCTL18.edf",
+      "status": "ok",
+      "group" : "bad",
+      "n_epochs": 1152,
+      "notes": [
+        "Annotation file: EPCTL18\\EPCTL18\\EPCTL18.txt (found, not applied)",
+        "Subsampled R-peaks to: 2000"
+      ],
+      "ecg_channel": "ECG1",
+      "sfreq": 1000.0,
+      "ecg_samples": 27164000,
+      "evoked_file": "out_stage1_sub1\\EPCTL18\\EPCTL18_evoked-ave.fif",
+      "epochs_file": "out_stage1_sub1\\EPCTL18\\EPCTL18_epochs-epo.fif"
+    },
+    {
+      "name": "EPCTL16",
+      "edf_path": "EPCTL16\\EPCTL16\\EPCTL16.edf",
+      "status": "ok",
+      "group": "good",
+      "n_epochs": 1,
+      "notes": [
+        "Annotation file: EPCTL16\\EPCTL16\\EPCTL16.txt (found, not applied)",
+        "Subsampled R-peaks to: 2000"
+      ],
+      "ecg_channel": "ECG1",
+      "sfreq": 1000.0,
+      "ecg_samples": 27313000,
+      "evoked_file": "out_stage1\\EPCTL16\\EPCTL16_evoked-ave.fif",
+      "epochs_file": "out_stage1\\EPCTL16\\EPCTL16_epochs-epo.fif"
+    },
+    {
+      "name": "EPCTL25",
+      "edf_path": "EPCTL25\\EPCTL25\\EPCTL25.edf",
+      "status": "ok",
+      "group": "bad",
+      "n_epochs": 1387,
+      "notes": [
+        "Annotation file: EPCTL25\\EPCTL25\\EPCTL25.txt (found, not applied)",
+        "Subsampled R-peaks to: 2000"
+      ],
+      "ecg_channel": "ECG1",
+      "sfreq": 1000.0,
+      "ecg_samples": 29507000,
+      "evoked_file": "out_stage1\\EPCTL25\\EPCTL25_evoked-ave.fif",
+      "epochs_file": "out_stage1\\EPCTL25\\EPCTL25_epochs-epo.fif"
+    }
+  ],
+  "config": {
+    "HP": 0.1,
+    "LP": 30.0,
+    "TMIN": -0.2,
+    "TMAX": 0.6,
+    "REJECT": {
+      "eeg": 0.00015
+    },
+    "MAX_EPOCHS_PER_SUBJECT": 2000
+  }
+}

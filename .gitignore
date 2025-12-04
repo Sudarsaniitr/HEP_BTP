@@ -25,19 +25,10 @@ dist/
 *.fif.gz
 *.edf
 *.edf.gz
-*.npz
-*.npy
-perm_checkpoint.npy
-group_stacked_data.npz
-group_means.npz
-tstats_full.npz
+
 
 # Project output folders (exclude stage outputs)
-out_stage1/
-out_stage1_sub1/
-out_stage2/
-out_stage2_tstats/
-out_stage3/
+
 
 # OS
 Thumbs.db

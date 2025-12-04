@@ -1,0 +1,19 @@
+{
+  "subjects": [
+    {
+      "name": "EPCTL26",
+      "status": "error",
+      "error": "MemoryError((33308, 71, 801), dtype('float64'))"
+    }
+  ],
+  "config": {
+    "HP": 0.1,
+    "LP": 30.0,
+    "TMIN": -0.2,
+    "TMAX": 0.6,
+    "REJECT": {
+      "eeg": 150
+    },
+    "MAX_EPOCHS_PER_SUBJECT": 1000000000.0
+  }
+}
