@@ -1,0 +1,13 @@
+Category,Count,Percentage (%)
+N1 stage,13,1.22
+N2 stage,325,30.46
+N3 stage,155,14.53
+R stage,108,10.12
+W stage,149,13.96
+transition N1–N2,4,0.37
+transition N2–N3,29,2.72
+transition N2–R,13,1.22
+transition N3–N2,19,1.78
+transition N3–R,0,0.0
+transition R–N2,1,0.09
+transition W–N1,7,0.66

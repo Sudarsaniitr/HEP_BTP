@@ -1,1 +1,1 @@
-npz_path
+N2
